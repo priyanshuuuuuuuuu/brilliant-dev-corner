@@ -9,21 +9,40 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { Layout } from '../components/Layout';
 
 const Index = () => {
   return (
     <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
-      <div className="min-h-screen bg-background">
-        <ThemeToggle />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Contact />
-        <Footer />
-      </div>
+      <Layout>
+        <div className="min-h-screen bg-background">
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
+          <section id="hero">
+            <Hero />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="skills">
+            <Skills />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="education">
+            <Education />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          <Footer />
+        </div>
+      </Layout>
     </ThemeProvider>
   );
 };
