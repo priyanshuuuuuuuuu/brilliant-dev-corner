@@ -12,11 +12,11 @@ const Footer = () => {
             {/* Brand */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Alex Johnson
+                Aman Acharya
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 Full Stack Developer passionate about creating innovative solutions 
-                and beautiful user experiences.
+                and beautiful user experiences with modern technologies.
               </p>
             </div>
             
@@ -40,9 +40,9 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Get in Touch</h4>
               <div className="space-y-2 text-sm">
-                <p className="text-gray-400">San Francisco, CA</p>
-                <p className="text-gray-400">alex.johnson@email.com</p>
-                <p className="text-gray-400">+1 (555) 123-4567</p>
+                <p className="text-gray-400">Mumbai, Maharashtra, India</p>
+                <p className="text-gray-400">amaanacharyajobs@gmail.com</p>
+                <p className="text-gray-400">+91 9137823508</p>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                <span>© {currentYear} Alex Johnson. Made with</span>
+                <span>© {currentYear} Aman Acharya. Made with</span>
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
                 <span>and lots of coffee.</span>
               </div>
