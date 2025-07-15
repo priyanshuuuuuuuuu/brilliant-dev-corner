@@ -12,7 +12,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Aman Acharya
+                Priyanshu Pandey
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 Full Stack Developer passionate about creating innovative solutions 
