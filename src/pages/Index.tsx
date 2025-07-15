@@ -1,4 +1,6 @@
 
+import { ThemeProvider } from '../components/ThemeProvider';
+import ThemeToggle from '../components/ThemeToggle';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
@@ -10,16 +12,19 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+      <div className="min-h-screen bg-background">
+        <ThemeToggle />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

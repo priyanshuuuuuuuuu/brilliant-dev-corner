@@ -60,15 +60,15 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-white/50 backdrop-blur-sm">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Featured Projects
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-            <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
               A showcase of my recent work, featuring modern web applications and innovative solutions.
             </p>
           </div>
@@ -77,7 +77,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
+                className="group bg-card rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2 border border-border"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative overflow-hidden">
@@ -90,33 +90,33 @@ const Projects = () => {
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-x-4">
                     <a
                       href={project.github}
-                      className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors"
+                      className="p-3 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
                       aria-label="View on GitHub"
                     >
-                      <Github className="w-5 h-5 text-gray-900" />
+                      <Github className="w-5 h-5 text-foreground" />
                     </a>
                     <a
                       href={project.demo}
-                      className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors"
+                      className="p-3 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
                       aria-label="View live demo"
                     >
-                      <ExternalLink className="w-5 h-5 text-gray-900" />
+                      <ExternalLink className="w-5 h-5 text-foreground" />
                     </a>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm font-medium border border-border"
                       >
                         {tech}
                       </span>

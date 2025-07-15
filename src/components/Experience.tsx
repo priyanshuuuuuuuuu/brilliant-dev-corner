@@ -42,22 +42,22 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Work Experience
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-            <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
               My professional journey through various roles and companies, building expertise in modern web development.
             </p>
           </div>
           
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 hidden md:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent hidden md:block"></div>
             
             <div className="space-y-8">
               {experiences.map((exp, index) => (
@@ -71,39 +71,39 @@ const Experience = () => {
                   </div>
                   
                   {/* Content Card */}
-                  <div className="flex-1 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="flex-1 bg-card backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                        <h3 className="text-xl font-semibold text-foreground mb-1">
                           {exp.title}
                         </h3>
-                        <p className="text-lg font-medium text-blue-600">
+                        <p className="text-lg font-medium text-primary">
                           {exp.company}
                         </p>
                       </div>
                       <div className="flex flex-col sm:text-right space-y-1 mt-2 sm:mt-0">
-                        <div className="flex items-center text-gray-600 text-sm">
+                        <div className="flex items-center text-muted-foreground text-sm">
                           <Calendar className="w-4 h-4 mr-1" />
                           {exp.period}
                         </div>
-                        <div className="flex items-center text-gray-600 text-sm">
+                        <div className="flex items-center text-muted-foreground text-sm">
                           <MapPin className="w-4 h-4 mr-1" />
                           {exp.location}
                         </div>
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
                       {exp.description}
                     </p>
                     
                     <div className="space-y-2">
-                      <h4 className="font-medium text-gray-900">Key Achievements:</h4>
+                      <h4 className="font-medium text-foreground">Key Achievements:</h4>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {exp.achievements.map((achievement) => (
                           <li
                             key={achievement}
-                            className="flex items-center text-sm text-gray-600"
+                            className="flex items-center text-sm text-muted-foreground"
                           >
                             <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${exp.color} mr-2 flex-shrink-0`}></div>
                             {achievement}
