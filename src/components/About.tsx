@@ -14,25 +14,28 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience 
-                creating digital solutions that bridge the gap between design and functionality. 
-                My journey in tech started with curiosity and has evolved into a love for 
-                crafting clean, efficient code.
+                I'm Priyanshu Pandey, a B.Tech CSSS (Computer Science and Social Sciences) student at IIIT Delhi. 
+                I'm passionate about full-stack web development and have been actively building projects that solve real-world problems.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in modern web technologies and enjoy working on projects 
-                that challenge me to learn and grow. When I'm not coding, you'll find me 
-                exploring new technologies, contributing to open-source projects, or 
-                sharing knowledge with the developer community.
+                Currently working as a Full-Stack Web Development Intern at VSM Pantnagar, where I've developed 
+                websites projected to attract 2700+ monthly users and boosted digital outreach by 60%. 
+                I enjoy exploring the intersection of technology and social impact.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Beyond academics, I'm actively involved in student council activities, tech clubs, and hackathons. 
+                I've solved 200+ DSA problems and love contributing to tech communities while pursuing my interests 
+                in cricket and badminton.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {[
-                  { label: 'Projects Completed', value: '50+' },
-                  { label: 'Years Experience', value: '5+' },
-                  { label: 'Technologies', value: '20+' },
-                  { label: 'Happy Clients', value: '30+' }
+                  { label: 'Projects Completed', value: '4+' },
+                  { label: 'CGPA (4 Semesters)', value: '7.05' },
+                  { label: 'DSA Problems Solved', value: '200+' },
+                  { label: 'Hackathon Achievements', value: '7th Place' }
                 ].map(({ label, value }) => (
                   <div key={label} className="text-center p-4 bg-card rounded-xl border border-border">
                     <div className="text-2xl font-bold text-foreground">{value}</div>
@@ -46,8 +49,8 @@ const About = () => {
               <div className="relative">
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 p-6 backdrop-blur-sm shadow-xl border border-border">
                   <img
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop"
-                    alt="Working on laptop"
+                    src="/lovable-uploads/9e878c25-8827-49b8-b979-667ffc13e536.png"
+                    alt="Priyanshu at work"
                     className="w-full h-full rounded-xl object-cover"
                   />
                 </div>

@@ -4,58 +4,40 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      github: '#',
+      title: 'GrievX – Grievance Redressal Platform',
+      description: 'NLP-based grievance classification system with auto-routing into 7 categories and integrated map API for authority mapping.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      tech: ['Flask', 'JavaScript', 'HTML/CSS', 'scikit-learn', 'Google Maps API'],
+      github: 'https://github.com/priyanshuuuuuuuuu/grievx',
       demo: '#',
       gradient: 'from-blue-500 to-purple-500'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates, team chat, and advanced reporting features.',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop',
-      tech: ['Next.js', 'TypeScript', 'MongoDB', 'Socket.io'],
-      github: '#',
+      title: 'RISC-V Assembler & Simulator',
+      description: 'Comprehensive simulator supporting 30+ standard RISC-V instructions (R, I, S, B, U, J) with instruction decoding using bitwise operations.',
+      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop',
+      tech: ['Python', 'Assembly Language', 'RISC-V', 'Bitwise Operations'],
+      github: 'https://github.com/priyanshuuuuuuuuu/risc-v-simulator',
       demo: '#',
       gradient: 'from-green-500 to-teal-500'
     },
     {
-      title: 'Weather Analytics Dashboard',
-      description: 'Interactive dashboard displaying weather patterns and climate data with beautiful visualizations and forecasting.',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
-      tech: ['Vue.js', 'D3.js', 'Python', 'FastAPI'],
-      github: '#',
+      title: 'Angry Birds – 2D Game Clone',
+      description: 'Complete game implementation with realistic projectile motion, collision detection, scoring system, and strong OOP principles.',
+      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
+      tech: ['Java', 'LibGDX', 'OOP', 'Game Physics', 'Collision Detection'],
+      github: 'https://github.com/priyanshuuuuuuuuu/angry-birds',
       demo: '#',
       gradient: 'from-orange-500 to-pink-500'
     },
     {
-      title: 'Social Media Mobile App',
-      description: 'Cross-platform mobile application with photo sharing, real-time messaging, and social networking features.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
-      tech: ['React Native', 'Firebase', 'Redux', 'Expo'],
-      github: '#',
+      title: 'Food Waste Management System',
+      description: 'Real-time food recycling platform with transport scheduling, tracking system, and role-based access control for efficient waste management.',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop',
+      tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Real-time tracking'],
+      github: 'https://github.com/priyanshuuuuuuuuu/food-waste-management',
       demo: '#',
       gradient: 'from-purple-500 to-indigo-500'
-    },
-    {
-      title: 'AI Content Generator',
-      description: 'Machine learning powered content creation tool with natural language processing and automated optimization.',
-      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop',
-      tech: ['Python', 'TensorFlow', 'React', 'Docker'],
-      github: '#',
-      demo: '#',
-      gradient: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Blockchain Voting System',
-      description: 'Secure and transparent voting platform built on blockchain technology with smart contracts and encryption.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
-      tech: ['Solidity', 'Web3.js', 'React', 'Ethereum'],
-      github: '#',
-      demo: '#',
-      gradient: 'from-cyan-500 to-blue-500'
     }
   ];
 
@@ -69,11 +51,11 @@ const Projects = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-              A showcase of my recent work, featuring modern web applications and innovative solutions.
+              A showcase of my technical projects, featuring innovative solutions and modern development practices.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div
                 key={project.title}
@@ -90,18 +72,24 @@ const Projects = () => {
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-x-4">
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
                       aria-label="View on GitHub"
                     >
                       <Github className="w-5 h-5 text-foreground" />
                     </a>
-                    <a
-                      href={project.demo}
-                      className="p-3 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
-                      aria-label="View live demo"
-                    >
-                      <ExternalLink className="w-5 h-5 text-foreground" />
-                    </a>
+                    {project.demo !== '#' && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
+                        aria-label="View live demo"
+                      >
+                        <ExternalLink className="w-5 h-5 text-foreground" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 

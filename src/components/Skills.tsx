@@ -1,43 +1,43 @@
 
-import { Code, Database, Globe, Smartphone, Settings, Cloud } from 'lucide-react';
+import { Code, Database, Globe, Smartphone, Settings, Cloud, BookOpen, Trophy } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
-      skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js', 'Sass']
-    },
-    {
-      title: 'Backend',
-      icon: Database,
-      color: 'from-green-500 to-emerald-500',
-      skills: ['Node.js', 'Python', 'Express', 'Django', 'PostgreSQL', 'MongoDB']
-    },
-    {
-      title: 'Mobile',
-      icon: Smartphone,
-      color: 'from-purple-500 to-pink-500',
-      skills: ['React Native', 'Flutter', 'iOS', 'Android', 'Expo', 'Firebase']
-    },
-    {
-      title: 'DevOps',
-      icon: Cloud,
-      color: 'from-orange-500 to-red-500',
-      skills: ['Docker', 'AWS', 'Kubernetes', 'CI/CD', 'Terraform', 'Linux']
-    },
-    {
-      title: 'Tools',
-      icon: Settings,
-      color: 'from-gray-500 to-slate-500',
-      skills: ['Git', 'VS Code', 'Figma', 'Postman', 'Jest', 'Webpack']
-    },
-    {
-      title: 'Languages',
+      title: 'Programming Languages',
       icon: Code,
-      color: 'from-indigo-500 to-blue-500',
-      skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'Go', 'Rust']
+      color: 'from-blue-500 to-cyan-500',
+      skills: ['C++', 'C', 'Java', 'JavaScript', 'Python', 'Assembly']
+    },
+    {
+      title: 'Web Technologies',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
+      skills: ['HTML/CSS', 'JavaScript', 'Flask', 'Django', 'Node.js', 'MySQL']
+    },
+    {
+      title: 'Frameworks & Libraries',
+      icon: Database,
+      color: 'from-purple-500 to-pink-500',
+      skills: ['LibGDX', 'Swing', 'scikit-learn', 'Google Maps API', 'React', 'Express']
+    },
+    {
+      title: 'Tools & Technologies',
+      icon: Settings,
+      color: 'from-orange-500 to-red-500',
+      skills: ['Git', 'Linux', 'Google Colab', 'LaTeX', 'Figma', 'Canva']
+    },
+    {
+      title: 'Design & Creativity',
+      icon: Smartphone,
+      color: 'from-indigo-500 to-purple-500',
+      skills: ['Figma', 'Canva', 'Framer', 'Spline', 'UI/UX Design', 'Game Design']
+    },
+    {
+      title: 'Core Computer Science',
+      icon: BookOpen,
+      color: 'from-teal-500 to-cyan-500',
+      skills: ['DSA', 'OOP', 'OS', 'DBMS', 'Algorithms', 'Math & Stats']
     }
   ];
 
@@ -51,7 +51,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-              A comprehensive toolkit of modern technologies and frameworks I use to build exceptional digital experiences.
+              A comprehensive toolkit of programming languages, frameworks, and technologies I use to build innovative solutions.
             </p>
           </div>
           

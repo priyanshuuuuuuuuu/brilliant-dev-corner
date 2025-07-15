@@ -1,11 +1,11 @@
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, MapPin, Calendar } from 'lucide-react';
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const texts = ['Full Stack Developer', 'Problem Solver', 'Tech Enthusiast', 'Code Craftsman'];
+  const texts = ['Full Stack Developer', 'Problem Solver', 'CSSS Student', 'Tech Enthusiast'];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="flex-1 text-center lg:text-left space-y-6">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-foreground via-primary to-primary bg-clip-text text-transparent">
-                Alex Johnson
+                Priyanshu Pandey
               </h1>
               <div className="h-12 lg:h-16">
                 <p className="text-2xl lg:text-3xl text-muted-foreground font-medium">
@@ -49,20 +49,34 @@ const Hero = () => {
             </div>
             
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Passionate developer creating innovative solutions with modern technologies. 
-              I transform ideas into elegant, scalable applications that make a difference.
+              B.Tech CSSS student at IIIT Delhi, passionate about full-stack development and problem-solving. 
+              Building innovative solutions and contributing to tech communities.
             </p>
+
+            {/* Personal Info */}
+            <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center lg:justify-start">
+                <MapPin className="w-4 h-4 mr-2" />
+                New Delhi, India
+              </div>
+              <div className="flex items-center justify-center lg:justify-start">
+                <Calendar className="w-4 h-4 mr-2" />
+                18 November, 2005
+              </div>
+            </div>
             
             {/* Social Links */}
             <div className="flex justify-center lg:justify-start space-x-6 pt-4">
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Mail, href: '#', label: 'Email' }
+                { icon: Github, href: 'https://github.com/priyanshuuuuuuuuu', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://linkedin.com/in/priyaanshuu', label: 'LinkedIn' },
+                { icon: Mail, href: 'mailto:priyanshu23406@iiitd.ac.in', label: 'Email' }
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 bg-card backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-border"
                   aria-label={label}
                 >
@@ -77,8 +91,8 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary to-accent p-2 shadow-2xl animate-float">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="Alex Johnson"
+                  src="/lovable-uploads/9e878c25-8827-49b8-b979-667ffc13e536.png"
+                  alt="Priyanshu Pandey"
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
